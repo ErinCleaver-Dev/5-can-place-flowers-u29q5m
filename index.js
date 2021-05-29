@@ -13,15 +13,16 @@ const canPlaceFlowers = (flowerbed, n) => {
   
   j = flowerbed.length;
   for(let i = 0; i < flowerbed.length; i++){
-    for(let j = flowerbed.length -1; j < flowerbed.length; j--) {
+    j = flowerbed.length - 1;
       if(i == 1 && j == 1) {
-        plotUsed = ture;
+        plotUsed = true;
       } else if(plotUsed) {
         plotUsed = false
       } else if(i == 0) {
         planted++;
+        plotUsed = true;
       }
-    }
+    j--;
   }
 
   if(n > planted) {
