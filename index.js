@@ -20,7 +20,7 @@ const canPlaceFlowers = (flowerbed, n) => {
         plotUsed = false;
       } else if(flowerbed[i] == 0) {
         planted++;
-        plotUsed = true;;
+        plotUsed = true;
       }
     j--;
   }
